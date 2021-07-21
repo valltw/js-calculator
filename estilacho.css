@@ -1,0 +1,79 @@
+body {
+    background-color:rgb(44, 42, 42);
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.botoncito {
+background-color: rgb(228, 116, 24);
+border-radius: 10px;
+color: seashell;
+
+box-sizing: border-box;
+width: 100%;
+padding: 15px;
+border: solid rgb(126, 38, 38) 5px;
+transition: .5ms;
+cursor: pointer;
+margin: 10px;
+
+
+}
+
+.botonsote{
+    background-color: rgb(228, 116, 24);
+border-radius: 10px;
+
+box-sizing: border-box;
+width: 215px;
+padding: 15px;
+border: solid rgb(126, 38, 38) 5px;
+transition: .5ms;
+cursor: pointer;
+margin: 5px;
+color: seashell;
+
+}
+
+#ig{
+    background-color: rgb(218, 64, 64);
+    border-radius: 100%;
+    
+    box-sizing: border-box;
+    width: 100px;
+    padding: 15px;
+    border: solid rgb(219, 208, 208) 5px;
+    transition: .5ms;
+    cursor: pointer;
+    margin: 5px;
+    color: seashell;
+
+}
+
+body  button:hover{
+    background-color: rgb(223, 156, 101);
+    
+}
+
+#resultado{
+box-sizing: content-box;
+width: 420px;
+height: 50px;
+border: solid rgb(126, 38, 38) 5px;
+padding: 10px;
+margin-bottom: 10px;
+
+}
+
+#botones {
+    background-color: cyan;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20%;
+    margin: 100px;
+
+
+
+}
