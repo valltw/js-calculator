@@ -122,4 +122,5 @@ button:hover{
     text-align: right;
     grid-row: 1 / 2 ;
     grid-column: 1 / 5 ;
+    color: rgb(238, 255, 0);
 }
