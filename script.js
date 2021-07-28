@@ -1,7 +1,8 @@
 let cuenta =0;
 let cuenta2=0;
 let operator="0";
-let primerDato=0;
+let tado=0;
+// let primerDato=0;
 console.log(cuenta, typeof cuenta);
 console.log(cuenta, typeof cuenta);
 console.log(cuenta.includes(0));
@@ -62,6 +63,9 @@ function addnine(){
 }
 function AC(){
     cuenta="0";
+    cuenta2=0;
+    operator="0";
+    tado=0;
     document.getElementById("display").innerHTML="0";
 }
 function addzero(){
@@ -83,18 +87,68 @@ function addzero(){
     
 // }
 function plus(){
-
-    if(primerDato === 0){
-        cuenta2=parseFloat(cuenta);
-        cuenta=0;
-        operator="+";
-        document.getElementById("display").innerHTML="0";
-        console.log(operator);
-        primerDato=1;  
-    }
+    cuenta2=parseFloat(cuenta);
+    cuenta=0;
+    operator="+";
+    document.getElementById("display").innerHTML="0";
+    console.log(operator);
+      
+    
+    console.log(cuenta, cuenta2);
+}
+function minus(){
+    cuenta2=parseFloat(cuenta);
+    cuenta=0;
+    operator="-";
+    document.getElementById("display").innerHTML="0";
+    console.log(operator);
+      
+    
+    console.log(cuenta, cuenta2);
+}
+function times(){
+    cuenta2=parseFloat(cuenta);
+    cuenta=0;
+    operator="*";
+    document.getElementById("display").innerHTML="0";
+    console.log(operator);
+      
+    
+    console.log(cuenta, cuenta2);
+}
+function divid(){
+    cuenta2=parseFloat(cuenta);
+    cuenta=0;
+    operator="/";
+    document.getElementById("display").innerHTML="0";
+    console.log(operator);
+      
+    
     console.log(cuenta, cuenta2);
 }
 function res(){
-    cuenta="0";
-    document.getElementById("display").innerHTML="0";
+    switch(operator){
+        case "+" :
+            tado= cuenta2 + parseFloat(cuenta); 
+            cuenta="0";
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "-" :
+            tado= cuenta2 - parseFloat(cuenta); 
+            cuenta="0";
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "*" :
+            tado= cuenta2 * parseFloat(cuenta); 
+            cuenta="0";
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "/" :
+            tado= cuenta2 / parseFloat(cuenta); 
+            cuenta="0";
+            document.getElementById("display").innerHTML=tado;
+            break;
+        default:
+    }
+   
 }
