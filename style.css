@@ -110,11 +110,11 @@ button:hover{
     grid-row: 2 / 3 ;
     grid-column: 1 / 2 ;
 }
-#percent{
+#plusmin{
     grid-row: 2 / 3 ;
     grid-column: 3 / 4 ;
 }
-#plusmin{
+#DEL{
     grid-row: 2 / 3 ;
     grid-column: 2 / 3 ;
 }

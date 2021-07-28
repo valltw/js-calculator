@@ -1,11 +1,10 @@
-let cuenta =0;
+let cuenta ="0";
 let cuenta2=0;
 let operator="0";
 let tado=0;
 // let primerDato=0;
 console.log(cuenta, typeof cuenta);
 console.log(cuenta, typeof cuenta);
-console.log(cuenta.includes(0));
 
 function addone(){    
     cuenta = cuenta + "1";
@@ -126,26 +125,42 @@ function divid(){
     
     console.log(cuenta, cuenta2);
 }
+function DEL(){
+
+    console.log(cuenta.length);
+    if(cuenta.length>2){
+        console.log("si entra");
+        cuenta=cuenta.slice(0,-1);
+        console.log(cuenta);
+        document.getElementById("display").innerHTML=cuenta.slice(1);
+        return 0;
+    }
+    console.log("no entra");
+    cuenta="0";
+    document.getElementById("display").innerHTML="0";
+               
+
+}
 function res(){
     switch(operator){
         case "+" :
             tado= cuenta2 + parseFloat(cuenta); 
-            cuenta="0";
+            cuenta=tado;
             document.getElementById("display").innerHTML=tado;
             break;
         case "-" :
             tado= cuenta2 - parseFloat(cuenta); 
-            cuenta="0";
+            cuenta=tado;
             document.getElementById("display").innerHTML=tado;
             break;
         case "*" :
             tado= cuenta2 * parseFloat(cuenta); 
-            cuenta="0";
+            cuenta=tado;
             document.getElementById("display").innerHTML=tado;
             break;
         case "/" :
             tado= cuenta2 / parseFloat(cuenta); 
-            cuenta="0";
+            cuenta=tado;
             document.getElementById("display").innerHTML=tado;
             break;
         default:
