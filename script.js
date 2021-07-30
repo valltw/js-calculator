@@ -3,136 +3,37 @@ let cuenta2=0;
 let operator="0";
 let tado=0;
 let redo=0;
-let des=1;
-console.log(cuenta, typeof cuenta);
-console.log(cuenta, typeof cuenta, cuenta.search("1"));
 
-function addone(){ 
+// const nombre = 'Victor'
+// const apellidoPaterno = 'Servin'
+// const apellidoMaterno = 'Carrillo'
+// const edad = 26;
+// // 'Hola Victor Servin Carrillo, tienes 26 años!'
+// const saludo = 'Hola ' + nombre + ' ' + apellidoPaterno + ' ' + apellidoMaterno + ', tienes ' + edad.toString() + ' años!';
+// const saludo = `Hola ${nombre} ${apellidoPaterno} ${apellidoMaterno}, tienes ${edad} años!`;
+
+function printValueToDisplay() {
+    if (cuenta.startsWith("0.")) {
+        document.getElementById("display").innerHTML=cuenta;
+        return;
+    }
+    document.getElementById("display").innerHTML = cuenta.slice(1);
+}
+
+function addNumber(number) {
     console.log(redo);
     if(redo === 0){
-        cuenta = cuenta + "1";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
+        // cuenta = `${ cuenta }${ number }`;
+        // cuenta = cuenta + number; // 1 + 1 = 2, '1' + '1' = '11'
+        cuenta += `${number}`; // cuenta = cuenta + `${number}` // 5 += 2 => 7
+        printValueToDisplay();
+        return;
     }  
     AC();
-    cuenta = cuenta + "1";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
+    cuenta += `${number}`;
+    printValueToDisplay();
 }
-function addtwo(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "2";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "2";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addthree(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "3";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "3";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addfour(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "4";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "4";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addfive(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "5";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "5";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addsix(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "6";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "6";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addseven(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "7";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "7";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addeight(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "8";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "8";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
-function addnine(){
-    console.log(redo);
-    if(redo === 0){
-        cuenta = cuenta + "9";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
-    }  
-    AC();
-    cuenta = cuenta + "9";
-    console.log(cuenta.slice(1));
-    document.getElementById("display").innerHTML=cuenta.slice(1);
-    redo=0;
-}
+
 function AC(){
     cuenta="0";
     cuenta2=0;
@@ -143,17 +44,15 @@ function AC(){
 }
 function addzero(){
     if(cuenta != "0" && redo === 0){
-
-        cuenta = cuenta + "0";
-        console.log(cuenta.slice(1));
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
+        cuenta += "0";
+        printValueToDisplay();
+        return;
     }
-    console.log("no entra");
     cuenta="0";
     redo =0;
     document.getElementById("display").innerHTML=0;
     }
+    
 function addpoint(){ 
     console.log(cuenta,cuenta.includes("."), redo === 0);
     if(cuenta.includes(".") === false)
@@ -161,91 +60,29 @@ function addpoint(){
         if (redo === 1){
             AC();
             cuenta = cuenta + ".";
-            document.getElementById("display").innerHTML=cuenta.slice(1);
+            printValueToDisplay();
             return 0;
         }
-        console.log("entra");
         cuenta = cuenta + ".";
-        document.getElementById("display").innerHTML=cuenta.slice(1);
-        return 0;
+        printValueToDisplay();
+        return;
     }
+}
+function operador(op){
+    if(redo === 1){
+        cuenta2=parseFloat(tado);
+        cuenta="0";
+        operator= op;
+        document.getElementById("display").innerHTML="0";
+        redo=0;
+        return;
+    }
+    cuenta2=parseFloat(cuenta);
+    cuenta="0";
+    operator=op;
+    document.getElementById("display").innerHTML="0";
+}
 
-
-}
-function plus(){
-    if(redo === 1){
-        cuenta2=parseFloat(tado);
-        cuenta="0";
-        operator="+";
-        document.getElementById("display").innerHTML="0";
-        console.log(operator);
-        console.log(cuenta, cuenta2);
-        redo=0;
-        return 0;
-    }
-    cuenta2=parseFloat(cuenta);
-    cuenta="0";
-    operator="+";
-    document.getElementById("display").innerHTML="0";
-    console.log(operator);
-    console.log(cuenta, cuenta2);
-}
-function minus(){
-    if(redo === 1){
-        cuenta2=parseFloat(tado);
-        cuenta="0";
-        operator="-";
-        document.getElementById("display").innerHTML="0";
-        console.log(operator);
-        console.log(cuenta, cuenta2);
-        redo=0;
-        return 0;
-    }
-    cuenta2=parseFloat(cuenta);
-    cuenta="0";
-    operator="-";
-    document.getElementById("display").innerHTML="0";
-    console.log(operator);
-    console.log(cuenta, cuenta2);
-    
-    console.log(cuenta, cuenta2);
-}
-function times(){
-    if(redo === 1){
-        cuenta2=parseFloat(tado);
-        cuenta="0";
-        operator="*";
-        document.getElementById("display").innerHTML="0";
-        console.log(operator);
-        console.log(cuenta, cuenta2);
-        redo=0;
-        return 0;
-    }
-    cuenta2=parseFloat(cuenta);
-    cuenta="0";
-    operator="*";
-    document.getElementById("display").innerHTML="0";
-    console.log(operator);
-    console.log(cuenta, cuenta2);
-}
-function divid(){
-    if(redo === 1){
-        cuenta2=parseFloat(tado);
-        cuenta="0";
-        operator="/";
-        document.getElementById("display").innerHTML="0";
-        console.log(operator);
-        console.log(cuenta, cuenta2);
-        redo=0;
-        return 0;
-    }
-    cuenta2=parseFloat(cuenta);
-    cuenta="0";
-    operator="/";
-    document.getElementById("display").innerHTML="0";
-    console.log(operator);
-    console.log(cuenta, cuenta2);
-}
 function DEL(){
 
     console.log(cuenta.length);
@@ -253,7 +90,7 @@ function DEL(){
         console.log("si entra");
         cuenta=cuenta.slice(0,-1);
         console.log(cuenta);
-        document.getElementById("display").innerHTML=cuenta.slice(1);
+        printValueToDisplay();
         return 0;
     }
     console.log("no entra");
@@ -270,57 +107,38 @@ function plusmin(){
     cuenta=-1 * cuenta;
     document.getElementById("display").innerHTML=cuenta;
 }
+function desition(opera){
+    switch(opera){
+        case "+" :
+            tado= cuenta2 + parseFloat(cuenta); 
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "-" :
+            tado= cuenta2 - parseFloat(cuenta); 
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "*" :
+            tado= cuenta2 * parseFloat(cuenta); 
+            document.getElementById("display").innerHTML=tado;
+            break;
+        case "/" :
+            tado= cuenta2 / parseFloat(cuenta); 
+            document.getElementById("display").innerHTML=tado;
+            break;
+        default:
+        }
+}
+
+
 function res(){
     if(redo != 1){
         redo=1;
         console.log(cuenta2,typeof cuenta2,cuenta, typeof cuenta2);
         console.log(operator);
-        switch(operator){
-        
-            case "+" :
-                tado= cuenta2 + parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                console.log(cuenta,operator,cuenta2,"=",tado);
-                break;
-            case "-" :
-                tado= cuenta2 - parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            case "*" :
-                tado= cuenta2 * parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            case "/" :
-                tado= cuenta2 / parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            default:
-            }
-        return 0;
+        desition(operator);
+        return;
     }
-        console.log(cuenta2,typeof cuenta2,cuenta, typeof cuenta2);
-        console.log(operator);
         cuenta2=tado;
-        switch(operator){
-        
-            case "+" :
-                tado= cuenta2 + parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                console.log(cuenta,operator,cuenta2,"=",tado);
-                break;
-            case "-" :
-                tado= cuenta2 - parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            case "*" :
-                tado= cuenta2 * parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            case "/" :
-                tado= cuenta2 / parseFloat(cuenta); 
-                document.getElementById("display").innerHTML=tado;
-                break;
-            default:
-            }
-        return 0;
+        desition(operator);
+        return;
 }
