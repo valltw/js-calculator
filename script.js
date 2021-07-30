@@ -122,6 +122,10 @@ function desition(opera){
             document.getElementById("display").innerHTML=tado;
             break;
         case "/" :
+            if(cuenta === '0'){
+                document.getElementById("display").innerHTML='Math Error';
+                break;   
+            }
             tado= cuenta2 / parseFloat(cuenta); 
             document.getElementById("display").innerHTML=tado;
             break;
@@ -133,8 +137,6 @@ function desition(opera){
 function res(){
     if(redo != 1){
         redo=1;
-        console.log(cuenta2,typeof cuenta2,cuenta, typeof cuenta2);
-        console.log(operator);
         desition(operator);
         return;
     }
