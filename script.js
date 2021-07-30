@@ -142,24 +142,35 @@ function AC(){
     document.getElementById("display").innerHTML="0";
 }
 function addzero(){
-    if(cuenta>0){
+    if(cuenta != "0" && redo === 0){
 
         cuenta = cuenta + "0";
         console.log(cuenta.slice(1));
         document.getElementById("display").innerHTML=cuenta.slice(1);
-
+        return 0;
     }
+    console.log("no entra");
+    cuenta="0";
+    redo =0;
+    document.getElementById("display").innerHTML=0;
     }
 function addpoint(){ 
-    console.log(cuenta,cuenta.includes("."));
-    if(cuenta.includes(".") === false && tado === 0)
+    console.log(cuenta,cuenta.includes("."), redo === 0);
+    if(cuenta.includes(".") === false)
     {
+        if (redo === 1){
+            AC();
+            cuenta = cuenta + ".";
+            document.getElementById("display").innerHTML=cuenta.slice(1);
+            return 0;
+        }
+        console.log("entra");
         cuenta = cuenta + ".";
         document.getElementById("display").innerHTML=cuenta.slice(1);
         return 0;
     }
-    AC();
-    addpoint();
+
+
 }
 function plus(){
     if(redo === 1){
