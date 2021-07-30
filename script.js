@@ -21,7 +21,6 @@ function printValueToDisplay() {
 }
 
 function addNumber(number) {
-    console.log(redo);
     if(redo === 0){
         // cuenta = `${ cuenta }${ number }`;
         // cuenta = cuenta + number; // 1 + 1 = 2, '1' + '1' = '11'
@@ -54,7 +53,6 @@ function addzero(){
     }
     
 function addpoint(){ 
-    console.log(cuenta,cuenta.includes("."), redo === 0);
     if(cuenta.includes(".") === false)
     {
         if (redo === 1){
@@ -77,6 +75,9 @@ function operador(op){
         redo=0;
         return;
     }
+    if(cuenta === "0"){
+        return;
+    }
     cuenta2=parseFloat(cuenta);
     cuenta="0";
     operator=op;
@@ -84,25 +85,19 @@ function operador(op){
 }
 
 function DEL(){
-
-    console.log(cuenta.length);
     if(cuenta.length>2 && redo === 0){
-        console.log("si entra");
         cuenta=cuenta.slice(0,-1);
-        console.log(cuenta);
         printValueToDisplay();
-        return 0;
+        return;
     }
-    console.log("no entra");
     AC();
-
 }
 function plusmin(){
     if(redo === 1){
         cuenta=-1 * parseFloat(tado);
         redo=0;
         document.getElementById("display").innerHTML=cuenta;
-        return 0;
+        return;
     }
     cuenta=-1 * cuenta;
     document.getElementById("display").innerHTML=cuenta;
@@ -144,3 +139,4 @@ function res(){
         desition(operator);
         return;
 }
+// 30/07/21
