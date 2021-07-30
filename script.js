@@ -4,7 +4,6 @@ let operator="0";
 let tado=0;
 let redo=0;
 let des=1;
-// let primerDato=0;
 console.log(cuenta, typeof cuenta);
 console.log(cuenta, typeof cuenta, cuenta.search("1"));
 
@@ -155,7 +154,7 @@ function addpoint(){
     console.log(cuenta,cuenta.includes("."));
     if(cuenta.includes(".") === false && tado === 0)
     {
-        cuenta = cuenta + "0.";
+        cuenta = cuenta + ".";
         document.getElementById("display").innerHTML=cuenta.slice(1);
         return 0;
     }
@@ -197,7 +196,6 @@ function minus(){
     document.getElementById("display").innerHTML="0";
     console.log(operator);
     console.log(cuenta, cuenta2);
-      
     
     console.log(cuenta, cuenta2);
 }
@@ -249,8 +247,17 @@ function DEL(){
     }
     console.log("no entra");
     AC();
-               
 
+}
+function plusmin(){
+    if(redo === 1){
+        cuenta=-1 * parseFloat(tado);
+        redo=0;
+        document.getElementById("display").innerHTML=cuenta;
+        return 0;
+    }
+    cuenta=-1 * cuenta;
+    document.getElementById("display").innerHTML=cuenta;
 }
 function res(){
     if(redo != 1){
@@ -305,5 +312,4 @@ function res(){
             default:
             }
         return 0;
-   
 }
