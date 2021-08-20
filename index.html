@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="./script.js" defer></script>
 
 </head>
+
 <body>
     <div class="calc">
         <div class="button1" id="display">0</div>
@@ -22,7 +24,7 @@
         <button class="button1" id="eight" onclick="addNumber(8)">8</button>
         <button class="button1" id="nine" onclick="addNumber(9)">9</button>
         <button class="nonnumber" id="plus" onclick="operador('+')">+</button>
-        <button class="nonnumber" id="minus"onclick="operador('-')">-</button>
+        <button class="nonnumber" id="minus" onclick="operador('-')">-</button>
         <button class="nonnumber" id="divid" onclick="operador('/')">/</button>
         <button class="nonnumber" id="times" onclick="operador('*')">x</button>
         <button class="button1" id="zero" onclick="addzero()">0</button>
@@ -33,12 +35,17 @@
         <button class="button2" id="DEL" onclick="DEL()">DEL</button>
     </div>
     <div class="calc1">
-        <button class="button1" id="clearbtn" onclick="clearbtn()">&#129529</button>
+        <div id="paperbtns">
+            <button class="buttonpaper" id="clearbtn" onclick="clearbtn()">&#129529</button>
+            <button class="buttonpaper" id="printbtn" onclick="printJSON()">&#128424 Print</button>
+        </div>
+
         <ul id="list">
-            
+
         </ul>
     </div>
-    
+
 </body>
+
 </html>
 <!--  30/07/21 -->

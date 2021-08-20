@@ -3,6 +3,7 @@ let cuenta2 = 0;
 let operator = "0";
 let tado = 0;
 let redo = 0;
+let histrory = [];
 
 // const nombre = 'Victor'
 // const apellidoPaterno = 'Servin'
@@ -48,8 +49,7 @@ function addzero() {
         printValueToDisplay();
         return;
     }
-    cuenta = "0";
-    redo = 0;
+    AC();
     document.getElementById("display").innerHTML = 0;
 }
 
@@ -152,9 +152,17 @@ function printToPaper() {
     let cuentita = cuenta.slice(1);
     let list = document.getElementById("list");
     list.innerHTML += `<li>${cuenta2}${operator}${cuentita} = ${tado}</li>`;
+    histrory.push(`${cuenta2}${operator}${cuentita} = ${tado}`);
+    console.log(histrory);
 }
 
 function clearbtn() {
+    histrory =[];
     let list = document.getElementById("list");
     list.innerHTML="";
+}
+
+function printJSON(){
+let histroryJSON = JSON.stringify(histrory);
+console.log(histroryJSON);
 }
