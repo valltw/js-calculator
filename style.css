@@ -20,6 +20,30 @@ button:hover{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(6,1fr);
     padding: 20px;
+    margin-right: 25px;
+    width: 250px;
+    max-width: 100%;
+    height: 336px;
+    max-height: 100%;
+}
+#list{
+    padding-top: -15px;
+    padding-left: 35px;
+}
+#clearbtn{
+    margin-left: 190px;
+}
+.calc1{
+    border: dashed 3px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    width: 250px;
+    height: 376px;
+    max-height: 376px;
+    background-image: url(./yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg);
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    overflow-y: auto;
 }
 .button1{
     background-color:rgba(25, 235, 130, .1);
@@ -123,6 +147,7 @@ button:hover{
     grid-row: 1 / 2 ;
     grid-column: 1 / 5 ;
     color: rgb(238, 255, 0);
+    overflow-y: auto;
 }
 
 /* 30/07/2021 */
