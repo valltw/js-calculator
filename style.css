@@ -1,27 +1,29 @@
-@font-face{
+@font-face {
     src: url(fonts/uni-sans-regular.ttf);
     font-family: unisansregular;
 }
 
-body{
+body {
     font-family: 'unisansregular', sans-serif;
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     display: flex;
     justify-content: center;
 }
-button{
+
+button {
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: tomato;
 }
-.calc{
+
+.calc {
     border: solid 3px rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     padding: 20px;
     margin-right: 25px;
     width: 250px;
@@ -30,30 +32,35 @@ button:hover{
     max-height: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-#list{
+
+#list {
     padding-top: 3.5px;
     padding-left: 35px;
     line-height: 11.5pt;
     font-size: 9.5pt;
 }
-#clearbtn{
 
-    grid-row: 1 / 2  ;
-    grid-column: 1 / 2 ;
+#clearbtn {
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 }
-#printbtn{
+
+#printbtn {
     width: auto;
-    grid-row: 1 / 2  ;
-    grid-column: 2 / 3 ;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
 }
-#paperbtns{
+
+#paperbtns {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(2,128px);
-    grid-template-rows: repeat(1,50px);
+    grid-template-columns: repeat(2, 128px);
+    grid-template-rows: repeat(1, 50px);
 }
-.buttonpaper{
-    background-color:rgba(25, 235, 130, .1);
+
+.buttonpaper {
+    background-color: rgba(25, 235, 130, .1);
     border: solid 2px white;
     border-radius: 10px;
     margin: 5px;
@@ -61,123 +68,147 @@ button:hover{
     height: 44px;
     width: 44px;
 }
-.calc1{
+
+.calc1 {
     /* border: solid 3px rgba(255, 255, 255, 0.5); */
     border-radius: 5px;
     width: 250px;
     height: 376px;
     max-height: 376px;
-    background-image: url(./yellow-notebook-paper-background-design-template-d7dfa26f8c8c759652e2521f0ecd24eb_screen.jpg);
-    background-size:     cover;                     
-    background-repeat:   no-repeat;
+    background-image: url(./notebook.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     overflow-y: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.button1{
+
+.button1 {
     font-family: 'unisansregular', sans-serif;
-    background-color:rgba(25, 235, 130, .1);
+    background-color: rgba(25, 235, 130, .1);
     border: solid 2px white;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
 }
-.button2{
+
+.button2 {
     font-family: 'unisansregular', sans-serif;
-    background-color:rgba(245, 245, 245, 0.836);
+    background-color: rgba(245, 245, 245, 0.836);
     border: solid 2px white;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
 }
-.nonnumber{
+
+.nonnumber {
     font-family: 'unisansregular', sans-serif;
-    background-color:rgba(224, 153, 47, 0.938);
+    background-color: rgba(224, 153, 47, 0.938);
     border: solid 2px white;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
 }
-#one{
-    grid-row: 5 / 6  ;
-    grid-column: 1 / 2 ;
+
+#one {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
 }
-#two{
-    grid-row: 5 / 6 ;
-    grid-column: 2 / 3 ;
+
+#two {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
 }
-#three{
-    grid-row: 5 / 6 ;
-    grid-column: 3 / 4 ;
+
+#three {
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
 }
-#four{
+
+#four {
     grid-row: 4 / 5;
-    grid-column: 1 / 2 ;
+    grid-column: 1 / 2;
 }
-#five{
-    grid-row: 4 / 5 ;
-    grid-column: 2 / 3 ;
+
+#five {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
 }
-#six{
-    grid-row: 4 / 5 ;
-    grid-column: 3 / 4 ;
+
+#six {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
 }
-#seven{
-    grid-row: 3 / 4 ;
-    grid-column: 1 / 2 ;
+
+#seven {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
 }
-#eight{
-    grid-row: 3 / 4 ;
-    grid-column: 2 / 3 ;
+
+#eight {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
 }
-#nine{
-    grid-row: 3 / 4 ;
-    grid-column: 3 / 4 ;
+
+#nine {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
 }
-#plus{
-    grid-row: 5 / 6 ;
-    grid-column: 4 / 5 ;
+
+#plus {
+    grid-row: 5 / 6;
+    grid-column: 4 / 5;
 }
-#minus{
-    grid-row: 4 / 5 ;
-    grid-column: 4 / 5 ;
+
+#minus {
+    grid-row: 4 / 5;
+    grid-column: 4 / 5;
 }
-#divid{
-    grid-row: 2 / 3 ;
-    grid-column: 4 / 5 ;
+
+#divid {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
 }
-#times{
-    grid-row: 3 / 4 ;
-    grid-column: 4 / 5 ;
+
+#times {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
 }
-#result{
-    grid-row: 6 / 7 ;
-    grid-column: 4 / 5 ;
+
+#result {
+    grid-row: 6 / 7;
+    grid-column: 4 / 5;
 }
-#zero{
-    grid-row: 6 / 7 ;
-    grid-column: 1 / 3 ;
+
+#zero {
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
 }
-#point{
-    grid-row: 6 / 7 ;
-    grid-column: 3 / 4 ;
+
+#point {
+    grid-row: 6 / 7;
+    grid-column: 3 / 4;
 }
-#AC{
-    grid-row: 2 / 3 ;
-    grid-column: 1 / 2 ;
+
+#AC {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
 }
-#plusmin{
-    grid-row: 2 / 3 ;
-    grid-column: 3 / 4 ;
+
+#plusmin {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
 }
-#DEL{
-    grid-row: 2 / 3 ;
-    grid-column: 2 / 3 ;
+
+#DEL {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
 }
-#display{
+
+#display {
     text-align: right;
-    grid-row: 1 / 2 ;
-    grid-column: 1 / 5 ;
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
     color: rgb(238, 255, 0);
     overflow-y: auto;
 }

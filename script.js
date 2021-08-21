@@ -153,16 +153,15 @@ function printToPaper() {
     let list = document.getElementById("list");
     list.innerHTML += `<li>${cuenta2}${operator}${cuentita} = ${tado}</li>`;
     histrory.push(`${cuenta2}${operator}${cuentita} = ${tado}`);
-    console.log(histrory);
 }
 
 function clearbtn() {
-    histrory =[];
+    histrory = [];
     let list = document.getElementById("list");
-    list.innerHTML="";
+    list.innerHTML = "";
 }
 
-function printJSON(){
-let histroryJSON = JSON.stringify(histrory);
-console.log(histroryJSON);
+function printJSON() {
+    let histroryJSON = JSON.stringify(histrory);
+    console.log(histroryJSON);
 }
