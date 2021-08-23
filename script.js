@@ -49,7 +49,8 @@ function addzero() {
         printValueToDisplay();
         return;
     }
-    AC();
+    cuenta = '0';
+    redo = 0;
     document.getElementById("display").innerHTML = 0;
 }
 
